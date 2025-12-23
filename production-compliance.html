@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Production Compliance Services | Unica Media</title>
+<meta name="description" content="Production compliance services ensuring legal, financial, labor, and regulatory adherence for film and media productions.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+.hero{background:url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1950&q=80");background-size:cover;background-position:center;background-attachment:fixed}
+.lazy-section{opacity:0;transform:translateY(30px);transition:.8s}
+.lazy-loaded{opacity:1;transform:translateY(0)}
+</style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+<section class="hero min-h-[70vh] flex items-center justify-center text-white lazy-section">
+<div class="text-center px-4">
+<h1 class="text-4xl md:text-6xl font-bold mb-6">Production Compliance</h1>
+<p class="text-xl md:text-2xl max-w-3xl mx-auto">Comprehensive compliance oversight to protect productions from regulatory, legal, and financial risks.</p>
+</div>
+</section>
+
+<section class="py-20 bg-white lazy-section">
+<div class="container mx-auto px-4 max-w-4xl">
+<h2 class="text-3xl font-bold mb-6">Service Overview</h2>
+<div class="w-20 h-1 bg-yellow-500 mb-6"></div>
+<p class="text-gray-600 mb-6">
+Production compliance ensures that all statutory, contractual, and regulatory obligations are met throughout the production lifecycle.
+</p>
+<p class="text-gray-600">
+Unica Media provides compliance supervision aligned with labor laws, tax regulations, union rules, and financier requirements.
+</p>
+</div>
+</section>
+
+<section class="py-20 bg-gray-100 lazy-section">
+<div class="container mx-auto px-4 max-w-5xl">
+<h2 class="text-3xl font-bold text-center mb-12">Coverage Areas</h2>
+<ul class="grid md:grid-cols-2 gap-6">
+<li>• Labor and employment laws</li>
+<li>• Tax withholding and statutory filings</li>
+<li>• Union and guild regulations</li>
+<li>• Local filming permissions</li>
+<li>• Contractual compliance</li>
+<li>• Financier and studio standards</li>
+</ul>
+</div>
+</section>
+
+<section class="py-20 bg-gray-900 text-white lazy-section">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold text-center mb-12">Case Experience</h2>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="bg-gray-800 p-8 rounded-lg">
+<h3 class="text-xl font-bold">OTT Series Production</h3>
+<p class="text-gray-300">Compliance oversight across multiple filming locations.</p>
+<p class="text-yellow-500 mt-2">Outcome: Zero regulatory objections</p>
+</div>
+<div class="bg-gray-800 p-8 rounded-lg">
+<h3 class="text-xl font-bold">International Ad Film</h3>
+<p class="text-gray-300">Labor and tax compliance support.</p>
+<p class="text-yellow-500 mt-2">Outcome: Smooth approvals</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-20 bg-yellow-500 text-center lazy-section">
+<h2 class="text-3xl font-bold mb-4">Ensure Risk-Free Production Execution</h2>
+<a href="contact.html" class="bg-gray-900 text-white px-6 py-3 rounded-lg font-bold">Speak to Our Team</a>
+</section>
+
+<script>
+const o=new IntersectionObserver(e=>e.forEach(t=>{t.isIntersecting&&(t.target.classList.add("lazy-loaded"),o.unobserve(t.target))}),{threshold:.2});
+document.querySelectorAll(".lazy-section").forEach(e=>o.observe(e));
+</script>
+
+</body>
+</html>

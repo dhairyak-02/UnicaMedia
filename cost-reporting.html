@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cost Reporting for Film Productions | Unica Media</title>
+  <meta name="description" content="Professional cost reporting services delivering accurate, audit-ready, and stakeholder-aligned financial reports for film and media productions.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    .hero {
+      background: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1950&q=80");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .lazy-section {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .lazy-loaded {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-gray-50 text-gray-800">
+
+<!-- HEADER (reuse from index.html) -->
+
+<section class="hero min-h-[70vh] flex items-center justify-center text-white lazy-section">
+  <div class="container mx-auto px-4 text-center">
+    <h1 class="text-4xl md:text-6xl font-bold mb-6">Cost Reporting</h1>
+    <p class="text-xl md:text-2xl max-w-3xl mx-auto">
+      Accurate, structured, and stakeholder-ready cost reports aligned with
+      studio, financier, and regulatory requirements.
+    </p>
+  </div>
+</section>
+
+<section class="py-20 bg-white lazy-section">
+  <div class="container mx-auto px-4 max-w-4xl">
+    <h2 class="text-3xl font-bold mb-6">Service Overview</h2>
+    <div class="w-20 h-1 bg-yellow-500 mb-6"></div>
+
+    <p class="text-gray-600 mb-6">
+      Cost Reporting converts production accounting data into clear, structured,
+      and periodic financial reports that provide real-time visibility into production spend.
+    </p>
+
+    <p class="text-gray-600">
+      Unica Media ensures reports are consistent, transparent, and aligned with
+      the expectations of producers, studios, financiers, and auditors.
+    </p>
+  </div>
+</section>
+
+<section class="py-20 bg-gray-100 lazy-section">
+  <div class="container mx-auto px-4 max-w-5xl">
+    <h2 class="text-3xl font-bold text-center mb-12">What We Deliver</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <ul class="space-y-4">
+        <li class="flex items-start">
+          <i class="fas fa-check text-yellow-500 mt-1 mr-3"></i>
+          Periodic cost reports (weekly / monthly)
+        </li>
+        <li class="flex items-start">
+          <i class="fas fa-check text-yellow-500 mt-1 mr-3"></i>
+          Budget vs actual variance analysis
+        </li>
+        <li class="flex items-start">
+          <i class="fas fa-check text-yellow-500 mt-1 mr-3"></i>
+          Cash-flow tracking and reporting
+        </li>
+      </ul>
+
+      <ul class="space-y-4">
+        <li class="flex items-start">
+          <i class="fas fa-check text-yellow-500 mt-1 mr-3"></i>
+          Financier- and studio-aligned formats
+        </li>
+        <li class="flex items-start">
+          <i class="fas fa-check text-yellow-500 mt-1 mr-3"></i>
+          Rebate-compatible cost summaries
+        </li>
+        <li class="flex items-start">
+          <i class="fas fa-check text-yellow-500 mt-1 mr-3"></i>
+          Audit-ready documentation
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-white lazy-section">
+  <div class="container mx-auto px-4 max-w-4xl">
+    <h2 class="text-3xl font-bold mb-6">Who This Service Is For</h2>
+    <div class="w-20 h-1 bg-yellow-500 mb-6"></div>
+
+    <ul class="space-y-3 text-gray-600">
+      <li>• Ongoing film and OTT productions</li>
+      <li>• Financiers requiring real-time cost visibility</li>
+      <li>• Studios and broadcasters monitoring spend</li>
+      <li>• Producers seeking audit-ready reporting</li>
+    </ul>
+  </div>
+</section>
+
+<section class="py-20 bg-gray-900 text-white lazy-section">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12">Case Experience</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-gray-800 p-8 rounded-lg">
+        <h3 class="text-xl font-bold mb-2">Multi-Location Film Shoot</h3>
+        <p class="text-gray-300">
+          Delivered periodic cost reports across multiple locations and currencies.
+        </p>
+        <p class="text-yellow-500 mt-2">
+          Outcome: Clear visibility and smooth audit closure
+        </p>
+      </div>
+
+      <div class="bg-gray-800 p-8 rounded-lg">
+        <h3 class="text-xl font-bold mb-2">Global Advertising Production</h3>
+        <p class="text-gray-300">
+          Structured cost reporting aligned with client and agency requirements.
+        </p>
+        <p class="text-yellow-500 mt-2">
+          Outcome: Zero post-production cost disputes
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-yellow-500 text-gray-900 text-center lazy-section">
+  <h2 class="text-3xl font-bold mb-4">Gain Complete Cost Visibility</h2>
+  <p class="mb-6">Ensure accurate, transparent, and audit-ready reporting.</p>
+  <a href="contact.html" class="bg-gray-900 text-white px-6 py-3 rounded-lg font-bold">
+    Speak to Our Experts
+  </a>
+</section>
+
+<script>
+const observer=new IntersectionObserver(e=>e.forEach(t=>{t.isIntersecting&&(t.target.classList.add("lazy-loaded"),observer.unobserve(t.target))}),{threshold:.2});
+document.querySelectorAll(".lazy-section").forEach(e=>observer.observe(e));
+</script>
+
+</body>
+</html>
