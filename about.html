@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "@id": "#about",
+        "name": "About Unica Media",
+        "about": {
+          "@id": "#organization"
+        },
+        "description": "Background and overview of Unica Media, a specialist consultancy serving the film and media production industry."
+      }
+    </script>
+
+    <title>About Us | Unica Media</title>
+    <meta
+      name="description"
+      content="Learn about Unica Media, a specialist consultancy providing film production audits, project accounting, compliance, and global rebate advisory services."
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      .hero {
+        background: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1950&q=80");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+      .lazy-section {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+      .lazy-loaded {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .film-strip {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="30" height="100" fill="%231f2937"/></svg>');
+        background-repeat: repeat-x;
+        height: 20px;
+      }
+    </style>
+  </head>
+
+  <body class="font-sans bg-gray-50 text-gray-800">
+    <!-- ================= HEADER ================= -->
+
+    <!-- Top Bar -->
+    <div class="bg-gray-900 text-white py-2 px-4 text-sm">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex space-x-4">
+          <span><i class="fas fa-phone-alt mr-1"></i> +91 9876543210</span>
+          <span><i class="fas fa-envelope mr-1"></i> info@mail.com</span>
+        </div>
+        <div class="flex space-x-4">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-linkedin-in"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="film-strip bg-gray-800"></div>
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center">
+          <div class="text-yellow-500 mr-2">
+            <i class="fas fa-film text-3xl"></i>
+          </div>
+          <a href="index.html" class="text-2xl font-bold text-gray-800">
+            Unica<span class="text-yellow-500">Media</span>
+          </a>
+        </div>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex space-x-8 items-center">
+          <a href="index.html" class="hover:text-yellow-500 font-medium"
+            >Home</a
+          >
+
+          <!-- Services Dropdown -->
+          <div class="relative group">
+            <button class="flex items-center hover:text-yellow-500 font-medium">
+              Services <i class="fas fa-chevron-down ml-1 text-sm"></i>
+            </button>
+            <div
+              class="absolute left-0 mt-3 w-64 bg-white shadow-lg rounded-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"
+            >
+              <a
+                href="film-production-audit.html"
+                class="block px-5 py-3 hover:bg-gray-50 hover:text-yellow-500"
+                >Film Production Audit</a
+              >
+              <a
+                href="global-film-rebate.html"
+                class="block px-5 py-3 hover:bg-gray-50 hover:text-yellow-500"
+                >Global Film Rebate</a
+              >
+              <a
+                href="production-compliance.html"
+                class="block px-5 py-3 hover:bg-gray-50 hover:text-yellow-500"
+                >Production Compliance</a
+              >
+              <a
+                href="budget-analysis.html"
+                class="block px-5 py-3 hover:bg-gray-50 hover:text-yellow-500"
+                >Budget Analysis</a
+              >
+              <a
+                href="cost-reporting.html"
+                class="block px-5 py-3 hover:bg-gray-50 hover:text-yellow-500"
+                >Cost Reporting</a
+              >
+            </div>
+          </div>
+
+          <a href="about.html" class="text-yellow-500 font-medium">About</a>
+          <!-- <a href="index.html#clients" class="hover:text-yellow-500 font-medium"
+            >Clients</a
+          > -->
+          <a href="contact.html" class="hover:text-yellow-500 font-medium"
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- ================= HERO ================= -->
+
+    <section
+      class="hero min-h-[70vh] flex items-center justify-center text-white lazy-section"
+    >
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">About Unica Media</h1>
+        <p class="text-xl md:text-2xl max-w-3xl mx-auto">
+          A specialist consultancy delivering financial clarity, compliance
+          confidence, and global incentive optimization for film and media
+          productions.
+        </p>
+      </div>
+    </section>
+
+    <div class="film-strip bg-gray-800"></div>
+
+    <!-- ================= ABOUT CONTENT ================= -->
+
+    <section class="py-20 bg-white lazy-section">
+      <div class="container mx-auto px-4 max-w-5xl">
+        <h2 class="text-3xl font-bold mb-6">Who We Are</h2>
+        <div class="w-20 h-1 bg-yellow-500 mb-6"></div>
+
+        <p class="text-gray-600 mb-6">
+          Unica Media is a specialized advisory firm focused exclusively on the
+          financial and regulatory aspects of film, OTT, and advertising
+          productions. Founded under the umbrella of
+          <strong>Mr. Anil Sekhri</strong>, the firm brings decades of
+          experience in production finance, governance, and compliance.
+        </p>
+
+        <p class="text-gray-600">
+          Our work spans production audits, project accounting, budget analysis,
+          cost reporting, compliance oversight, and global film rebate
+          advisory—supporting productions from pre-production through final
+          audit and closure.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= LEADERSHIP ================= -->
+
+    <section class="py-20 bg-gray-100 lazy-section">
+      <div class="container mx-auto px-4 max-w-5xl">
+        <h2 class="text-3xl font-bold mb-6">Leadership</h2>
+        <div class="w-20 h-1 bg-yellow-500 mb-6"></div>
+
+        <div class="bg-white rounded-lg shadow-md p-8">
+          <div class="grid md:grid-cols-3 gap-8 items-start">
+            <!-- Founder Photo -->
+            <div class="md:col-span-1 text-center">
+              <img
+                src="assets/DNS_0503-min-scaled.jpg"
+                alt="Mr. Anil Sekhri – Founder & Principal Advisor, Unica Media"
+                class="w-48 h-48 mx-auto rounded-full object-cover shadow-md"
+              />
+            </div>
+
+            <!-- Founder Content -->
+            <div class="md:col-span-2">
+              <h3 class="text-2xl font-bold mb-1">Mr. Anil Sekhri</h3>
+              <p class="text-yellow-500 font-medium mb-4">
+                Founder & Principal Advisor
+              </p>
+              <p
+                class="italic text-gray-500 mb-6 border-l-4 border-yellow-500 pl-4"
+              >
+                “Strong productions are built on creative vision supported by
+                financial clarity, discipline, and compliance.”
+              </p>
+
+              <p class="text-gray-600 mb-4">
+                Mr. Anil Sekhri brings decades of experience in financial
+                governance, audit, and advisory services, with a strong focus on
+                the film, entertainment, and media production ecosystem.
+              </p>
+
+              <p class="text-gray-600 mb-4">
+                His professional background spans production audits, financial
+                structuring, compliance oversight, and advisory engagements for
+                feature films, OTT content, and large-scale advertising
+                productions. He has worked closely with producers, studios,
+                financiers, and production houses to ensure financial
+                transparency, regulatory compliance, and audit-ready reporting.
+              </p>
+
+              <p class="text-gray-600">
+                Under his leadership, Unica Media was established to provide
+                specialized, end-to-end financial and compliance advisory
+                services tailored specifically to the operational realities of
+                film and media productions—bridging the gap between creative
+                execution and financial discipline.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MISSION ================= -->
+
+    <section class="py-20 bg-gray-900 text-white lazy-section">
+      <div class="container mx-auto px-4 max-w-4xl text-center">
+        <h2 class="text-3xl font-bold mb-6">Our Mission</h2>
+        <div class="w-20 h-1 bg-yellow-500 mx-auto mb-6"></div>
+
+        <p class="text-gray-300 text-lg">
+          To be a trusted financial partner to the entertainment industry by
+          delivering transparent project accounting, rigorous audits, and
+          optimized rebate solutions that protect budgets, ensure compliance,
+          and enhance production value worldwide.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= WHY UNICA ================= -->
+
+    <section class="py-20 bg-gray-100 lazy-section">
+      <div class="container mx-auto px-4 max-w-5xl">
+        <h2 class="text-3xl font-bold text-center mb-12">Why Unica Media</h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="font-bold mb-3">Industry-Focused</h3>
+            <p class="text-gray-600">
+              We work exclusively with film, OTT, and advertising productions.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="font-bold mb-3">Financial Discipline</h3>
+            <p class="text-gray-600">
+              Our approach emphasizes accuracy, transparency, and
+              audit-readiness.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="font-bold mb-3">Global Perspective</h3>
+            <p class="text-gray-600">
+              Experience across multiple jurisdictions and incentive frameworks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+
+    <section class="py-20 bg-yellow-500 text-gray-900 text-center lazy-section">
+      <h2 class="text-3xl font-bold mb-4">Work With a Specialist Team</h2>
+      <p class="mb-6">
+        Partner with Unica Media for clarity, control, and confidence.
+      </p>
+      <a
+        href="index.html#contact"
+        class="bg-gray-900 text-white px-6 py-3 rounded-lg font-bold"
+      >
+        Get in Touch
+      </a>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+      <div class="container mx-auto px-4 text-center text-gray-400">
+        © 2025 Unica Media Consultants. All rights reserved.
+      </div>
+    </footer>
+
+    <script>
+      const observer = new IntersectionObserver(
+        (e) =>
+          e.forEach((t) => {
+            t.isIntersecting &&
+              (t.target.classList.add("lazy-loaded"),
+              observer.unobserve(t.target));
+          }),
+        { threshold: 0.2 }
+      );
+      document
+        .querySelectorAll(".lazy-section")
+        .forEach((e) => observer.observe(e));
+    </script>
+  </body>
+</html>

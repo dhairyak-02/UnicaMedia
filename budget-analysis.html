@@ -1,158 +1,420 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Budget Analysis for Film Productions | Unica Media</title>
-  <meta name="description" content="Professional budget analysis services for film and media productions to improve cost efficiency, funding alignment, and financial feasibility.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": "#budget-analysis",
+        "name": "Budget Analysis",
+        "provider": {
+          "@id": "#organization"
+        },
+        "areaServed": "Worldwide",
+        "description": "Professional budget analysis services to improve cost efficiency, feasibility, and funding alignment for film and media productions."
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Budget Analysis"
+          }
+        ]
+      }
+    </script>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Budget Analysis for Film Productions | Unica Media</title>
+    <meta
+      name="description"
+      content="Professional budget analysis services for film and media productions to improve cost efficiency, funding alignment, and financial feasibility."
+    />
 
-  <style>
-    .hero {
-      background: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1950&q=80");
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-    }
-    .lazy-section {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-    .lazy-loaded {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
-</head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-<body class="font-sans bg-gray-50 text-gray-800">
+    <style>
+      .hero {
+        background: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1950&q=80");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+      .lazy-section {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+      .lazy-loaded {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
 
-<!-- HEADER (reuse from index.html) -->
-
-<section class="hero min-h-[70vh] flex items-center justify-center text-white lazy-section">
-  <div class="container mx-auto px-4 text-center">
-    <h1 class="text-4xl md:text-6xl font-bold mb-6">Budget Analysis</h1>
-    <p class="text-xl md:text-2xl max-w-3xl mx-auto">
-      In-depth evaluation of production budgets to improve cost efficiency,
-      funding alignment, and financial feasibility.
-    </p>
-  </div>
-</section>
-
-<section class="py-20 bg-white lazy-section">
-  <div class="container mx-auto px-4 max-w-4xl">
-    <h2 class="text-3xl font-bold mb-6">Service Overview</h2>
-    <div class="w-20 h-1 bg-yellow-500 mb-6"></div>
-
-    <p class="text-gray-600 mb-6">
-      Budget Analysis focuses on reviewing and evaluating planned production costs
-      before filming begins. A well-structured budget is critical for funding approvals,
-      cost control, and rebate eligibility.
-    </p>
-
-    <p class="text-gray-600">
-      Unica Media works closely with producers and financiers to identify inefficiencies,
-      assess cost risks, and align budgets with industry benchmarks and funding expectations.
-    </p>
-  </div>
-</section>
-
-<section class="py-20 bg-gray-100 lazy-section">
-  <div class="container mx-auto px-4 max-w-5xl">
-    <h2 class="text-3xl font-bold text-center mb-12">What We Analyze</h2>
-
-    <div class="grid md:grid-cols-2 gap-8">
-      <ul class="space-y-4">
-        <li class="flex items-start">
-          <i class="fas fa-check text-yellow-500 mt-1 mr-3"></i>
-          Line-by-line budget review
-        </li>
-        <li class="flex items-start">
-          <i class="fas fa-check text-yellow-500 mt-1 mr-3"></i>
-          Cost benchmarking against comparable productions
-        </li>
-        <li class="flex items-start">
-          <i class="fas fa-check text-yellow-500 mt-1 mr-3"></i>
-          Identification of high-risk cost heads
-        </li>
-      </ul>
-
-      <ul class="space-y-4">
-        <li class="flex items-start">
-          <i class="fas fa-check text-yellow-500 mt-1 mr-3"></i>
-          Funding gap and cash-flow assessment
-        </li>
-        <li class="flex items-start">
-          <i class="fas fa-check text-yellow-500 mt-1 mr-3"></i>
-          Alignment with rebate and incentive criteria
-        </li>
-        <li class="flex items-start">
-          <i class="fas fa-check text-yellow-500 mt-1 mr-3"></i>
-          Feasibility review for studios and investors
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="py-20 bg-white lazy-section">
-  <div class="container mx-auto px-4 max-w-4xl">
-    <h2 class="text-3xl font-bold mb-6">Who This Service Is For</h2>
-    <div class="w-20 h-1 bg-yellow-500 mb-6"></div>
-
-    <ul class="space-y-3 text-gray-600">
-      <li>• Producers in pre-production or funding stage</li>
-      <li>• Studios assessing project feasibility</li>
-      <li>• Financiers and investors reviewing budgets</li>
-      <li>• OTT platforms evaluating commissioning proposals</li>
-    </ul>
-  </div>
-</section>
-
-<section class="py-20 bg-gray-900 text-white lazy-section">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-12">Case Experience</h2>
-
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="bg-gray-800 p-8 rounded-lg">
-        <h3 class="text-xl font-bold mb-2">Independent Feature Film</h3>
-        <p class="text-gray-300">
-          Conducted a detailed budget review to identify cost risks and restructure
-          spending before production commencement.
-        </p>
-        <p class="text-yellow-500 mt-2">
-          Outcome: Reduced budget risk and improved funding confidence
-        </p>
-      </div>
-
-      <div class="bg-gray-800 p-8 rounded-lg">
-        <h3 class="text-xl font-bold mb-2">OTT Platform Commission</h3>
-        <p class="text-gray-300">
-          Evaluated production budgets submitted for platform approval.
-        </p>
-        <p class="text-yellow-500 mt-2">
-          Outcome: Optimized budgets aligned with platform benchmarks
-        </p>
+  <body class="font-sans bg-gray-50 text-gray-800">
+    <!-- HEADER (reuse from index.html) -->
+    <!-- Top Bar -->
+    <div class="bg-gray-900 text-white py-2 px-4 text-sm">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex space-x-4">
+          <a href="index.html" class="hover:text-yellow-400">
+            <i class="fas fa-phone-alt mr-1"></i> +91 9876543210
+          </a>
+          <a href="mailto:info@mail.com" class="hover:text-yellow-400">
+            <i class="fas fa-envelope mr-1"></i> info@mail.com
+          </a>
+        </div>
+        <div class="flex space-x-4">
+          <a href="#" class="hover:text-yellow-400"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" class="hover:text-yellow-400"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="#" class="hover:text-yellow-400"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="#" class="hover:text-yellow-400"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
 
-<section class="py-20 bg-yellow-500 text-gray-900 text-center lazy-section">
-  <h2 class="text-3xl font-bold mb-4">Strengthen Your Production Budget</h2>
-  <p class="mb-6">Get an expert review before you go into production.</p>
-  <a href="contact.html" class="bg-gray-900 text-white px-6 py-3 rounded-lg font-bold">
-    Get a Free Consultation
-  </a>
-</section>
+    <div class="film-strip bg-gray-800"></div>
 
-<script>
-const observer=new IntersectionObserver(e=>e.forEach(t=>{t.isIntersecting&&(t.target.classList.add("lazy-loaded"),observer.unobserve(t.target))}),{threshold:.2});
-document.querySelectorAll(".lazy-section").forEach(e=>observer.observe(e));
-</script>
+    <!-- Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center">
+          <div class="text-yellow-500 mr-2">
+            <i class="fas fa-film text-3xl"></i>
+          </div>
+          <a href="#" class="text-2xl font-bold text-gray-800"
+            >Unica<span class="text-yellow-500">Media</span></a
+          >
+        </div>
 
-</body>
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-8 items-center">
+          <a
+            href="index.html"
+            class="text-gray-800 hover:text-yellow-500 font-medium"
+          >
+            Home
+          </a>
+
+          <!-- Services Dropdown -->
+          <div class="relative group">
+            <button
+              class="flex items-center text-gray-800 hover:text-yellow-500 font-medium focus:outline-none"
+            >
+              Services
+              <i class="fas fa-chevron-down ml-1 text-sm"></i>
+            </button>
+
+            <div
+              class="absolute left-0 mt-3 w-64 bg-white shadow-lg rounded-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"
+            >
+              <a
+                href="film-production-audit.html"
+                class="block px-5 py-3 hover:bg-gray-50 hover:text-yellow-500"
+              >
+                Film Production Audit
+              </a>
+              <a
+                href="global-film-rebate.html"
+                class="block px-5 py-3 hover:bg-gray-50 hover:text-yellow-500"
+              >
+                Global Film Rebate
+              </a>
+              <a
+                href="production-compliance.html"
+                class="block px-5 py-3 hover:bg-gray-50 hover:text-yellow-500"
+              >
+                Production Compliance
+              </a>
+              <a
+                href="budget-analysis.html"
+                class="block px-5 py-3 hover:bg-gray-50 hover:text-yellow-500"
+              >
+                Budget Analysis
+              </a>
+              <a
+                href="cost-reporting.html"
+                class="block px-5 py-3 hover:bg-gray-50 hover:text-yellow-500"
+              >
+                Cost Reporting
+              </a>
+            </div>
+          </div>
+
+          <a
+            href="about.html"
+            class="text-gray-800 hover:text-yellow-500 font-medium"
+          >
+            About
+          </a>
+
+          <!-- <a
+            href="index.html#clients"
+            class="text-gray-800 hover:text-yellow-500 font-medium"
+          >
+            Clients
+          </a> -->
+
+          <a
+            href="contact.html"
+            class="text-gray-800 hover:text-yellow-500 font-medium"
+          >
+            Contact
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <section
+      class="hero min-h-[70vh] flex items-center justify-center text-white lazy-section"
+    >
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">Budget Analysis</h1>
+        <p class="text-xl md:text-2xl max-w-3xl mx-auto">
+          In-depth evaluation of production budgets to improve cost efficiency,
+          funding alignment, and financial feasibility.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white lazy-section">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <h2 class="text-3xl font-bold mb-6">Service Overview</h2>
+        <div class="w-20 h-1 bg-yellow-500 mb-6"></div>
+
+        <p class="text-gray-600 mb-6">
+          Budget Analysis focuses on reviewing and evaluating planned production
+          costs before filming begins. A well-structured budget is critical for
+          funding approvals, cost control, and rebate eligibility.
+        </p>
+
+        <p class="text-gray-600">
+          Unica Media works closely with producers and financiers to identify
+          inefficiencies, assess cost risks, and align budgets with industry
+          benchmarks and funding expectations.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-20 bg-gray-100 lazy-section">
+      <div class="container mx-auto px-4 max-w-5xl">
+        <h2 class="text-3xl font-bold text-center mb-12">What We Analyze</h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <i class="fas fa-check text-yellow-500 mt-1 mr-3"></i>
+              Line-by-line budget review
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-yellow-500 mt-1 mr-3"></i>
+              Cost benchmarking against comparable productions
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-yellow-500 mt-1 mr-3"></i>
+              Identification of high-risk cost heads
+            </li>
+          </ul>
+
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <i class="fas fa-check text-yellow-500 mt-1 mr-3"></i>
+              Funding gap and cash-flow assessment
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-yellow-500 mt-1 mr-3"></i>
+              Alignment with rebate and incentive criteria
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-yellow-500 mt-1 mr-3"></i>
+              Feasibility review for studios and investors
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white lazy-section">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <h2 class="text-3xl font-bold mb-6">Who This Service Is For</h2>
+        <div class="w-20 h-1 bg-yellow-500 mb-6"></div>
+
+        <ul class="space-y-3 text-gray-600">
+          <li>• Producers in pre-production or funding stage</li>
+          <li>• Studios assessing project feasibility</li>
+          <li>• Financiers and investors reviewing budgets</li>
+          <li>• OTT platforms evaluating commissioning proposals</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="py-20 bg-gray-900 text-white lazy-section">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Case Experience</h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-gray-800 p-8 rounded-lg">
+            <h3 class="text-xl font-bold mb-2">Independent Feature Film</h3>
+            <p class="text-gray-300">
+              Conducted a detailed budget review to identify cost risks and
+              restructure spending before production commencement.
+            </p>
+            <p class="text-yellow-500 mt-2">
+              Outcome: Reduced budget risk and improved funding confidence
+            </p>
+          </div>
+
+          <div class="bg-gray-800 p-8 rounded-lg">
+            <h3 class="text-xl font-bold mb-2">OTT Platform Commission</h3>
+            <p class="text-gray-300">
+              Evaluated production budgets submitted for platform approval.
+            </p>
+            <p class="text-yellow-500 mt-2">
+              Outcome: Optimized budgets aligned with platform benchmarks
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-yellow-500 text-gray-900 text-center lazy-section">
+      <h2 class="text-3xl font-bold mb-4">Strengthen Your Production Budget</h2>
+      <p class="mb-6">Get an expert review before you go into production.</p>
+      <a
+        href="contact.html"
+        class="bg-gray-900 text-white px-6 py-3 rounded-lg font-bold"
+      >
+        Get a Free Consultation
+      </a>
+    </section>
+
+    <script>
+      const observer = new IntersectionObserver(
+        (e) =>
+          e.forEach((t) => {
+            t.isIntersecting &&
+              (t.target.classList.add("lazy-loaded"),
+              observer.unobserve(t.target));
+          }),
+        { threshold: 0.2 }
+      );
+      document
+        .querySelectorAll(".lazy-section")
+        .forEach((e) => observer.observe(e));
+    </script>
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-500 mr-2">
+                <i class="fas fa-film text-2xl"></i>
+              </div>
+              <a href="index.html" class="text-xl font-bold">
+                Unica<span class="text-yellow-500">Media</span>
+              </a>
+            </div>
+            <p class="text-gray-400 mb-4">
+              Specialized consultancy services for the film and advertisement
+              production industry.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold mb-4">Services</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li>
+                <a
+                  href="film-production-audit.html"
+                  class="hover:text-yellow-500"
+                  >Film Production Audit</a
+                >
+              </li>
+              <li>
+                <a href="global-film-rebate.html" class="hover:text-yellow-500"
+                  >Global Film Rebate</a
+                >
+              </li>
+              <li>
+                <a
+                  href="production-compliance.html"
+                  class="hover:text-yellow-500"
+                  >Production Compliance</a
+                >
+              </li>
+              <li>
+                <a href="budget-analysis.html" class="hover:text-yellow-500"
+                  >Budget Analysis</a
+                >
+              </li>
+              <li>
+                <a href="cost-reporting.html" class="hover:text-yellow-500"
+                  >Cost Reporting</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li>
+                <a href="index.html" class="hover:text-yellow-500">Home</a>
+              </li>
+              <li>
+                <a href="index.html#services" class="hover:text-yellow-500"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a href="index.html#contact" class="hover:text-yellow-500"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold mb-4">Contact</h3>
+            <p class="text-gray-400">+91 9876543210</p>
+            <p class="text-gray-400">info@mail.com</p>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-800 pt-6 text-center text-gray-400">
+          © 2025 Unica Media Consultants. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
