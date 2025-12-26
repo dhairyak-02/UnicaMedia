@@ -10,18 +10,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-/* ================= SMTP CONFIG ================= */
-
-const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST,
-  port: Number(process.env.SMTP_PORT),
-  secure: false,
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS
-  }
-});
-
 /* ================= CONTACT FORM ENDPOINT ================= */
 
 app.post("/api/contact", async (req, res) => {
@@ -40,34 +28,52 @@ app.post("/api/contact", async (req, res) => {
   }
 
   try {
-    await transporter.sendMail({
-      from: `"Unica Media Website" <${process.env.SMTP_USER}>`,
-      to: process.env.RECEIVER_EMAIL,
-      replyTo: email,
-      subject: `New Website Enquiry (${source || "Website"})`,
-      html: `
-        <h2>New Enquiry Received</h2>
-        <table border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse;">
-          <tr><td><strong>Name</strong></td><td>${name}</td></tr>
-          <tr><td><strong>Company</strong></td><td>${company || "-"}</td></tr>
-          <tr><td><strong>Email</strong></td><td>${email}</td></tr>
-          <tr><td><strong>Phone</strong></td><td>${phone || "-"}</td></tr>
-          <tr><td><strong>Service</strong></td><td>${service || "-"}</td></tr>
-          <tr><td><strong>Source</strong></td><td>${source || "Unknown"}</td></tr>
-          <tr><td><strong>Message</strong></td><td>${message}</td></tr>
-        </table>
-      `
-    });
+    await axios.post(
+      "https://api.brevo.com/v3/smtp/email",
+      {
+        sender: {
+          name: "Unica Media Website",
+          email: "no-reply@unicamedia.com"
+        },
+        to: [
+          { email: process.env.RECEIVER_EMAIL }
+        ],
+        replyTo: {
+          email: email,
+          name: name
+        },
+        subject: `New Website Enquiry (${source || "Website"})`,
+        htmlContent: `
+          <h2>New Enquiry Received</h2>
+          <table border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse;">
+            <tr><td><strong>Name</strong></td><td>${name}</td></tr>
+            <tr><td><strong>Company</strong></td><td>${company || "-"}</td></tr>
+            <tr><td><strong>Email</strong></td><td>${email}</td></tr>
+            <tr><td><strong>Phone</strong></td><td>${phone || "-"}</td></tr>
+            <tr><td><strong>Service</strong></td><td>${service || "-"}</td></tr>
+            <tr><td><strong>Source</strong></td><td>${source || "-"}</td></tr>
+            <tr><td><strong>Message</strong></td><td>${message}</td></tr>
+          </table>
+        `
+      },
+      {
+        headers: {
+          "api-key": process.env.BREVO_API_KEY,
+          "Content-Type": "application/json",
+          accept: "application/json"
+        }
+      }
+    );
 
     res.json({ success: true });
 
   } catch (error) {
-    console.error("Email error:", error);
+    console.error("Brevo API error:", error.response?.data || error.message);
     res.status(500).json({ error: "Failed to send email" });
   }
 });
 
-/* ================= HEALTH CHECK (RENDER) ================= */
+/* ================= HEALTH CHECK ================= */
 
 app.get("/", (req, res) => {
   res.send("Unica Media backend is running.");
