@@ -33,7 +33,7 @@ app.post("/api/contact", async (req, res) => {
       {
         sender: {
           name: "Unica Media Website",
-          email: "no-reply@unicamedia.com"
+          email: "dkk080504@gmail.com"
         },
         to: [
           { email: process.env.RECEIVER_EMAIL }
