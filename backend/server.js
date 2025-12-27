@@ -12,7 +12,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-/* ================= LEAD STORAGE ================= */
+/* ================= LOCAL LEAD STORAGE (OPTIONAL) ================= */
 
 const LEADS_FILE = path.join(__dirname, "leads.json");
 
@@ -38,9 +38,9 @@ app.post("/api/contact", async (req, res) => {
   }
 
   try {
-    /* ---------- 1. ADMIN EMAIL ---------- */
+    /* ---------- 1. ADMIN EMAIL (BREVO) ---------- */
     await axios.post(
-      process.env.GSHEET_WEBHOOK_URL,
+      "https://api.brevo.com/v3/smtp/email",
       {
         sender: {
           name: "Unica Media Website",
@@ -71,7 +71,7 @@ app.post("/api/contact", async (req, res) => {
       }
     );
 
-    /* ---------- 2. AUTO-REPLY EMAIL ---------- */
+    /* ---------- 2. AUTO-REPLY EMAIL (BREVO) ---------- */
     await axios.post(
       "https://api.brevo.com/v3/smtp/email",
       {
@@ -83,18 +83,12 @@ app.post("/api/contact", async (req, res) => {
         subject: "We’ve received your enquiry – Unica Media",
         htmlContent: `
           <p>Hi ${name},</p>
-
           <p>Thank you for reaching out to <strong>Unica Media</strong>.</p>
-
           <p>We’ve received your enquiry regarding <strong>${service || "our services"}</strong>.
-          Our team will review your message and get back to you shortly.</p>
-
-          <p>If your matter is urgent, feel free to reply to this email.</p>
-
+          Our team will get back to you shortly.</p>
           <br />
           <p>Best regards,<br />
-          <strong>Unica Media</strong><br />
-          Film Production Audit & Advisory</p>
+          <strong>Unica Media</strong></p>
         `
       },
       {
@@ -106,13 +100,26 @@ app.post("/api/contact", async (req, res) => {
       }
     );
 
-    /* ---------- 3. STORE LEAD ---------- */
+    /* ---------- 3. GOOGLE SHEETS STORAGE ---------- */
+    await axios.post(process.env.GSHEET_WEBHOOK_URL, {
+      name,
+      company,
+      email,
+      phone,
+      service,
+      message,
+      source
+    });
+
+    console.log("Lead saved to Google Sheets");
+
+    /* ---------- 4. LOCAL BACKUP ---------- */
     saveLead({ name, company, email, phone, service, message, source });
 
     res.json({ success: true });
 
   } catch (error) {
-    console.error("Brevo API error:", error.response?.data || error.message);
+    console.error("Contact form error:", error.response?.data || error.message);
     res.status(500).json({ error: "Failed to process request" });
   }
 });
