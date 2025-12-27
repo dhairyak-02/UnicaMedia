@@ -40,7 +40,7 @@ app.post("/api/contact", async (req, res) => {
   try {
     /* ---------- 1. ADMIN EMAIL ---------- */
     await axios.post(
-      "https://api.brevo.com/v3/smtp/email",
+      process.env.GSHEET_WEBHOOK_URL,
       {
         sender: {
           name: "Unica Media Website",
